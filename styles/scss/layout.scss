@@ -1,0 +1,43 @@
+// ---- Container
+:root {
+    --container-padding: 20px;
+    --container-width: calc(100% - var(--container-padding) * 2); 
+}
+
+@media only screen and (min-width: 800px) {
+    :root {
+        --container-padding: 40px;
+    }
+}
+  
+@media only screen and (min-width: 1390px) {
+    :root {
+        --container-padding: 120px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-left: calc(50% - var(--container-width) / 2);
+    padding-right: calc(50% - var(--container-width) / 2);
+}
+
+// ---- Reset ----
+ul {
+    list-style: none;
+}
+
+// ---- Utils ----
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-color {
+    color: var(--main-color);
+}

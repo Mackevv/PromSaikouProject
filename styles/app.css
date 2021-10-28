@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DelaGothicOne";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/DelaGothicOne/DelaGothicOne.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LilitaOne";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/LilitaOne/LilitaOne.ttf") format("truetype");
+}
+:root {
+  --container-padding: 20px;
+  --container-width: calc(100% - var(--container-padding) * 2);
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    --container-padding: 40px;
+  }
+}
+@media only screen and (min-width: 1390px) {
+  :root {
+    --container-padding: 120px;
+  }
+}
+.container {
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}
+
+ul {
+  list-style: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--main-color);
+  color: #fff;
+}
+.sidebar ul {
+  margin: 0px 35px;
+}
+.sidebar .logo {
+  margin: 10px 25px 0 10px;
+}
+
+.sidebar .nav-links li {
+  font-family: "DelaGothicOne", sans-serif;
+  margin: 25px 0;
+}
+
+.header {
+  background: url("../assets/images/header.jpg") center center/cover no-repeat;
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
+}
+
+.header-title {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 38%;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.homepage > section {
+  margin-bottom: 35px;
+}
+
+.sns-header,
+.news-header {
+  height: 50px;
+  background-color: var(--main-color);
+  padding-left: 30px;
+}
+
+.sns-title,
+.news-title {
+  color: #fff;
+  font-family: "LilitaOne", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+}
+
+.news-content {
+  display: flex;
+  padding: 30px;
+  border: 2px solid var(--main-color);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.new-popup {
+  margin-right: 10px;
+}
+.new-popup span {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 18px;
+  padding: 0 2px;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+.news-text {
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+.sns-content {
+  border: 2px solid var(--main-color);
+}
+
+.sns-author {
+  font-weight: 300;
+  font-size: 18px;
+  padding: 10px 0 5px 30px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 14fr;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.user-avatar img {
+  border-radius: 4px;
+  width: 85px;
+}
+
+.post-description .username {
+  font-size: 22px;
+  font-weight: 600;
+}
+.post-description .userid {
+  color: #989898;
+  font-weight: 300;
+}
+.post-description .post-content {
+  margin-top: 10px;
+}
+.post-description img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+:root {
+  --sidebar-width: 200px;
+  --main-color: #e25790;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+#app {
+  width: calc(100% - var(--sidebar-width));
+}
+
+/*# sourceMappingURL=app.css.map */
