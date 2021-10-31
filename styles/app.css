@@ -179,13 +179,16 @@ ul {
   border-bottom: 1px solid #c5c5c5;
 }
 
-.post {
+.post:not(:last-of-type) {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.post-main {
   display: grid;
-  grid-template-columns: 1fr 14fr;
+  grid-template-columns: 1fr 15fr;
   grid-auto-flow: column;
   grid-gap: 20px;
   padding: 20px;
-  border-bottom: 1px solid #c5c5c5;
 }
 
 .user-avatar img {
@@ -209,6 +212,36 @@ ul {
   border-radius: 25px;
 }
 
+.post-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.post-footer svg {
+  width: 35px;
+  height: 35px;
+}
+
+.scroll-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+.scroll-up .arrow-up {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+}
+.scroll-up span {
+  font-family: "LilitaOne";
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #727272;
+}
+
 :root {
   --sidebar-width: 200px;
   --main-color: #e25790;
@@ -229,6 +262,7 @@ body {
 
 #app {
   width: calc(100% - var(--sidebar-width));
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=app.css.map */
